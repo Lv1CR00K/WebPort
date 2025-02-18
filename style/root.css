@@ -1,0 +1,68 @@
+:root{
+    
+    --whiteBg: #28384f;
+    --blackBg: white;
+    --grayBg: #151e2b;
+    --txtColD: white;
+    --txtColW: black;
+
+    --borderValueWhite: 1px #354a69 solid;
+
+    
+    --BGP: #151e2b;
+    --BGPA: rgb(62, 57, 87);
+    --BGC: white;
+    --BGCA: white;
+}
+body{
+    color: white;
+}
+
+header{
+    position: fixed;
+    z-index: 2;
+    top: 0%;
+    width: 100%;
+    height: 50px;
+    background-color: var(--grayBg);
+    box-shadow: var(--shadowValue);
+}#menuHider{
+    display: none;
+}header .menuTab{
+    list-style: none;
+}header .menuTab  li{
+    padding: 17px;
+}
+
+footer{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: calc(100vw - 18px);
+    background-color: var(--grayBg);
+    color: var(--txtColD);
+    box-sizing: border-box;
+}
+
+@media (max-width: 700px){
+    #menuHider{
+        display: block;
+    }.menuTab{
+        padding: 40px 0px 0px 0px;
+        display: block;
+        position: fixed;
+        background-color: rgb(62, 57, 87);
+        height: 100%;
+        width: 200px;
+        z-index: 3;
+        touch-action: none;
+        transform: translateY(0px) translateX(calc(-100% - 10px));
+        top: 50px;
+        transition: transform 200ms ease;
+    }#menuHider:has(input:checked) ~ .menuTab{
+        transform: translateX(-10px);
+    }
+}
