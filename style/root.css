@@ -1,21 +1,21 @@
 :root{
     
-    --whiteBg: #28384f;
-    --blackBg: white;
-    --grayBg: #151e2b;
-    --txtColD: white;
-    --txtColW: black;
+    --whiteBg: #28384f !important;
+    --blackBg: white !important;
+    --grayBg: #151e2b !important;
+    --txtColD: white !important;
+    --txtColW: black !important;
 
-    --borderValueWhite: 1px #354a69 solid;
+    --borderValueWhite: 1px #354a69 solid !important;
 
     
-    --BGP: #151e2b;
-    --BGPA: rgb(62, 57, 87);
-    --BGC: white;
-    --BGCA: white;
+    --BGP: #151e2b !important;
+    --BGPA: rgb(62, 57, 87) !important;
+    --BGC: white !important;
+    --BGCA: white !important;
 }
 body{
-    color: white;
+    color: white !important;
 }
 
 header{
