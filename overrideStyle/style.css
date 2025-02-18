@@ -48,6 +48,10 @@ header{
     background-color: var(--whiteBg);
 }
 
+svg{
+    width: 100%;
+}
+
 footer{
     padding: 10px 10px 50px 10px;
     display: flex;
@@ -55,7 +59,7 @@ footer{
     align-items: center;
     justify-content: center;
     text-align: center;
-    width: calc(100vw - 18px);
+    width: 100%;
     background-color: var(--grayBg);
     color: var(--txtColD);
     box-sizing: border-box;
