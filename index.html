@@ -21,18 +21,21 @@
 
             <img src="public/crookwork.png" width="38px"/>
             <ul class="menuTab">
-                <li>ME</li>
-                <li>Education</li>
-                <li>Experience</li>
-                <li>Projects</li>
-                <li>Contacts</li>
+                <a href="#me"><li>ME</li></a>
+                <a href="#education"><li>Education</li></a>
+                <a href="#experience"><li>Experience</li></a>
+                <a href="#projects"><li>Projects</li></a>
+                <a href="#contacts"><li>Contacts</li></a>
             </ul>
         </header>
-        <div style="width: 100%; height: 700px; background-color: var(--greyBg)"></div>
-        <div style="width: 100%; height: 700px; background-color: var(--whiteBg);"></div>
-        <div style="width: 100%; height: 700px; background-color: #394f6e;"></div>
-        <div style="width: 100%; height: 700px; background-color: #455f85"></div>
-        <footer>
+        <video autoplay muted loop style="position: fixed; width: 100%; top: -150px; z-index: -1;">
+            <source src="public/computer.mp4" type="video/mp4">
+        </video>
+        <div id="me" style="width: 100%; height: 700px; background-color: #151e2b; margin-top: 800px;"></div>
+        <div id="education" style="width: 100%; height: 700px; background-color: var(--whiteBg);"></div>
+        <div id="experience" style="width: 100%; height: 700px; background-color: #394f6e;"></div>
+        <div id="projects" style="width: 100%; height: 700px; background-color: #455f85"></div>
+        <footer id="contacts">
             <p style="padding: 0px 10px 5px 10px">Contacts:</p>
             <div style="width: 150px; display: flex; padding: 5px">
                 <div style="flex: 1"><a target='_blank' href="https://www.facebook.com/Lvl1Crook/"><img style="height: 50px" src='public/facebook.png' /></a></div>
