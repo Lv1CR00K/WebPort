@@ -14,6 +14,12 @@ body{
     --BGCA: white !important;
 
     color: white !important;
+
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none;
 }
 html {
     scroll-behavior: smooth;
@@ -33,11 +39,13 @@ header{
     list-style: none;
 }header .menuTab  li{
     padding: 16px 20;
-}.menuTab a{
-    transition: all 500ms ease-in-out;
+    transition: all 200ms ease-in-out;
+}.menuTab .menuSelection{
+    transition: all 200ms ease-in-out;
     border-bottom: var(--grayBg) solid 1px;
-}.menuTab a:hover{
-    border-bottom: white solid 1px;
+}.menuTab .menuSelection:hover{
+    border-bottom-color: white;
+    background-color: var(--whiteBg);
 }
 
 footer{
@@ -72,5 +80,11 @@ footer{
         transition: transform 200ms ease;
     }#menuHider:has(input:checked) ~ .menuTab{
         transform: translateX(-10px);
+    }.menuTab li{
+        text-align: center;
+    }.menuTab .menuSelection{
+        border-bottom-width: 0px;
+    }.menuTab .menuSelection:hover li{
+        background-color: rgb(51, 47, 72);
     }
 }
