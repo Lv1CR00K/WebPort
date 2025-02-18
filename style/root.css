@@ -1,5 +1,4 @@
-:root{
-    
+body{
     --whiteBg: #28384f !important;
     --blackBg: white !important;
     --grayBg: #151e2b !important;
@@ -13,8 +12,7 @@
     --BGPA: rgb(62, 57, 87) !important;
     --BGC: white !important;
     --BGCA: white !important;
-}
-body{
+
     color: white !important;
 }
 
