@@ -32,7 +32,12 @@ header{
 }header .menuTab{
     list-style: none;
 }header .menuTab  li{
-    padding: 17px;
+    padding: 16px 20;
+}.menuTab a{
+    transition: all 500ms ease-in-out;
+    border-bottom: var(--grayBg) solid 1px;
+}.menuTab a:hover{
+    border-bottom: white solid 1px;
 }
 
 footer{
@@ -47,6 +52,8 @@ footer{
     color: var(--txtColD);
     box-sizing: border-box;
 }
+
+
 
 @media (max-width: 700px){
     #menuHider{
