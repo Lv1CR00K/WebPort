@@ -1,0 +1,72 @@
+[
+    {
+        "name": "Jean Cyrus Pakingan",
+        "educ": [
+            {
+                "name": "PMMS Las Piñas",
+                "position": "Science, Technology, Engineering, and Mathematics (STEM)",
+                "date": "2018-2020",
+                "src": "public/pmms.png"
+            },
+            {
+                "name": "STI College Bacoor",
+                "position": "Bachelor of Science in Information Technology (BSIT)",
+                "date": "2020-2024",
+                "src": "public/sti.png"
+            }
+        ],
+        "experience" : [{
+            "name": "Land Transportation Office (LTO) Bacoor District Office",
+            "position": "Full-Stack Developer",
+            "info" : "Created a file management system in order for a faster file locating within file shelfs, barrowing system for files, archiving, and more.",
+            "date": "Feb 2024 - May 2024",
+            "src": "public/lto.png"
+        }],
+        "skills" : [
+            {
+                "name": "PHP",
+                "src": "public/php.JPG"
+            },
+            {
+                "name": "Javascript",
+                "src": "public/js.png"
+            },
+            {
+                "name": "HTML",
+                "src": "public/html.png"
+            },
+            {
+                "name": "CSS",
+                "src": "public/css.png"
+            },
+            {
+                "name": "React JS",
+                "src": "public/react.png"
+            },
+            {
+                "name": "C#",
+                "src": "public/csharp.png"
+            },
+            {
+                "name": "MySql",
+                "src": "public/mysql.png"
+            },
+            {
+                "name": "GitHub",
+                "src": "public/github.png"
+            },
+            {
+                "name": "XAMPP",
+                "src": "public/xampp.png"
+            },
+            {
+                "name": "Unity 3D",
+                "src": "public/unity.png"
+            },
+            {
+                "name": "Android Studio",
+                "src": "public/android.png"
+            }
+        ]
+    }
+]
