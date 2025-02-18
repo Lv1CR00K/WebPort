@@ -1,0 +1,536 @@
+/*------------------ ROOT ------------------*/
+:root{
+    font-size: 15px;
+    --whiteBg: white;
+    --blackBg: black;
+    --grayBg: rgb(238, 238, 238);
+    --UnsetBg: blue;
+    --txtColD: black;
+    --txtColL: White;
+    --textBigSize: 25px;
+    --textMedSize: 20px;
+    --textSmolSize: 15px;
+    --shadowValue: 0px 10px 10px rgba(0, 0, 0, 0.103);
+    --shadowRightVal: 10px 0 5px -5px rgba(0, 0, 0, 0.103);
+    --borderValue: 1px rgb(233, 233, 233) solid;
+    --borderValueWhite: 1px white solid;
+    --borderValueBlack: 1px black solid;
+    --borderValueUnset: 1px blue solid;
+
+    /* FOR INSIDE CONTENTS */
+    --bRad: 0px;
+    --tAl: left;
+    --pad: 10px;
+    --mar: 0px;
+    --W: 100%;
+    --H: 100%;
+    --bCol: rgb(233, 233, 233);
+    --pos: relative;
+    --scale: 1;
+    --HW: 50px;
+    --BGP: white;
+    --BGPA: #3d3d3d;
+    --BGC: black;
+    --BGCA: white;
+    /* FOR INSIDE CONTENTS */
+
+    /* FOR DISPLAY FLEX/GRID*/
+    --bWidth: 100%;   
+    --cWidth: 100%;
+    --gMin: 140px;
+    /* FOR DISPLAY FLEX/GRID*/
+
+    /* FOR ICON LINE CONTROL*/
+    /* FOR ICON LINE CONTROL*/
+}
+/*------------------ BODY ------------------*/
+
+/*------------------ BODY ------------------*/
+body{
+    background-color: var(--grayBg);
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+}.middle_body{
+    display: flex;
+    position: relative;
+    overflow: auto;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    box-sizing: border-box;
+}
+/*------------------ BODY ------------------*/
+
+/*------------------ FORM ------------------*/
+form{
+    margin: 0px;
+}
+/*------------------ FORM ------------------*/
+
+/*------------------ FLEX//GRID ------------------*/
+[class*="display_type_"]{
+    position: var(--pos);
+    width: var(--bWidth);
+    align-items: center;
+    box-sizing: border-box;
+}[class*="display_type_flex"].child_width_adjust > div{
+    width: var(--cWidth);
+}.display_type_flex_row{
+    display: flex;
+    flex-direction: row;
+}.display_type_flex_column{
+    display: flex;
+    flex-direction: column;
+}.display_type_grid_column{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(var(--gMin), 1fr));
+    position: var(--pos);
+    grid-auto-rows: min-content;
+    width: var(--W);
+}
+/*------------------ FLEX//GRID ------------------*/
+
+/*------------------ TEXT ------------------*/
+h1,h2,h3,h4,p{
+    text-align: var(--tAl);
+    padding: var(--pad);
+    margin: var(--mar);
+    color: var(--txtColD);
+}[class*="cont_border_"]{
+    border-color: var(--bCol) !important;
+    border-radius: var(--bRad);
+}.cont_border_top{
+    border-bottom: var(--borderValue);
+}.cont_border_right{
+    border-right: var(--borderValue);
+}.cont_border_bot{
+    border-bottom: var(--borderValue);
+}.cont_border_left{
+    border-left: var(--borderValue);
+}a{
+    text-align: var(--tAl);
+    color: var(--txtColD);
+    text-decoration: none;
+}ul, li{
+    text-align: var(--tAl);
+    color: var(--txtColD);
+    font-weight: bold;
+}
+/*------------------ TEXT ------------------*/
+
+/*------------------ MEDIA VIEWER ------------------*/
+[class*="picture_holder"]{
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    border-radius: var(--bRad);
+}.picture_holder{
+    height: var(--H);
+}.picture_holder_aspect{
+    aspect-ratio: 16 / 9;
+}
+/*------------------ MEDIA VIEWER ------------------*/
+
+
+/*------------------ HEADER FOOTER ------------------*/
+header{
+    display: flex;
+    align-items: center;
+    padding: 0px 10px;
+    box-sizing: border-box;
+}header > ul{
+    display: flex;
+    flex: 1;
+    margin: 0px;
+    padding: 0px 60px 0px 0px;
+    justify-content: center;
+}
+/*------------------ HEADER FOOTER ------------------*/
+
+/*------------------ DIV STYLE ------------------*/
+[class*="body_box"]{
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    border-radius: var(--bRad);
+    box-sizing: border-box;
+}
+.body_box_bg{
+    background-color: var(--whiteBg);
+}.body_box_bg_shadow{
+    background-color: var(--whiteBg);
+    box-shadow: var(--shadowValue);
+}.body_box_border{
+    border: var(--borderValueWhite);
+}.body_box_bg_border{
+    background-color: var(--whiteBg);
+    border: var(--borderValueWhite);
+}.body_box_bg_border_shadow{
+    background-color: var(--whiteBg);
+    border: var(--borderValueWhite);
+    box-shadow: var(--shadowValue);
+}
+/*------------------ DIV STYLE ------------------*/
+
+/* --------------BUTTON STYLE-------------- */
+[class*="btn_"]{
+    display: flex;
+    position: var(--pos);
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+}[class*="btn_"]:hover{
+    transition: all 150ms ease-in-out;
+}
+
+.btn_bg{
+    background-color: var(--whiteBg);
+    color: var(--txtColD);
+}.btn_bg:hover{
+    background-color: var(--blackBg);
+    color: var(--txtColL);
+}.btn_bg.active{
+    background-color: var(--blackBg);
+    color: var(--txtColL);
+}
+
+.btn_underLine{
+    background-color: none;
+    color: var(--txtColD);
+}.btn_underLine:hover{
+    border-bottom: 1px solid var(--txtColD);
+}.btn_underLine.active{
+    border-bottom: 1px solid var(--txtColD);
+}
+
+/* ~~~~~~~~~~~ FOR ICONS ~~~~~~~~~~~ */
+[id*="icon_check_"]{
+    display: none !important;
+}[class*="label_icon_"]{
+    padding: 0px !important;
+    margin: var(--mar) !important;
+}[class*="label_icon_"]:hover{
+    cursor: pointer;
+    filter: brightness(95%);
+    transition: 150ms all ease-in-out;
+}[class*="icn_"]{
+    display: flex !important;
+    align-items: center !important;
+    text-align: center;
+    justify-content: center !important;
+    position: var(--pos);
+    border-radius: var(--bRad);
+    background-color: var(--BGP);
+    width: var(--HW) !important;
+    height: var(--HW) !important;
+    padding: calc(var(--HW) * 0.33) !important;
+    flex-direction: column;
+    transition: 200ms all ease-in-out;
+}[class*="icnOnly_"]{
+    display: flex !important;
+    align-items: center !important;
+    text-align: center;
+    justify-content: center !important;
+    position: var(--pos);
+    border-radius: var(--bRad);
+    background-color: var(--BGP);
+    width: var(--HW) !important;
+    height: var(--HW) !important;
+    flex-direction: column;
+}[class*="icn_"] div{
+    transition: 200ms all ease-in-out;
+    margin: 2.5px;
+    padding: 0px !important;
+}[class*="icn_"] svg path{
+    transition: 200ms all ease-in-out;
+    stroke: black;
+    stroke-width: 0;
+    stroke-linecap: round;
+    stroke-dasharray: 1%;
+    stroke-linejoin: round;
+}[class*="icn_"] svg{
+    transition: 200ms all ease-in-out;
+    width: var(--HW) !important;
+    height: var(--HW) !important;
+}
+
+[id*="icon_check_"]:checked + [class*="icn_"]{
+    background-color: var(--BGPA);
+}[id*="icon_check_"]:not(:checked) + [class*="icn_"]{
+    background-color: var(--BGP);
+}[id*="icon_check_"]:checked + [class*="icn_"] svg path{
+    stroke: var(--BGCA);
+    fill: var(--BGCA);
+}[id*="icon_check_"]:not(:checked) + [class*="icn_"] svg path{
+    fill: var(--BGC);
+    stroke: var(--BGC);
+}[class*="icnOnly_"] svg path{
+    fill: var(--BGC);
+    stroke: var(--BGC);
+}
+
+/* FOR TOGGLE MENU */
+[class*="icn_menu"] path:nth-child(1){
+    transform-origin: 50% 21%;
+}[class*="icn_menu"] path:nth-child(3){
+    transform-origin: 50% 79%;
+}[id*="icon_check_"]:checked + .icn_menu path:nth-child(2){
+    fill: transparent;
+}[id*="icon_check_"]:checked + .icn_menu path:nth-child(1){
+    transform: translateY(29%) rotateZ(45deg) scaleX(1.15);
+}[id*="icon_check_"]:checked + .icn_menu path:nth-child(3){
+    transform: translateY(-29%) rotateZ(-45deg) scaleX(1.15);
+}
+/* FOR TOGGLE MENU */
+
+/* FOR TOGGLE PASSWORD */
+[class*="icn_pass"] path:nth-child(1){
+    transform-origin: 50% 45%;
+}[id*="icon_check_"]:checked + .icn_pass path:nth-child(1){
+    transform: rotateZ(-55deg);
+}
+/* FOR TOGGLE PASSWORD */
+
+/* FOR TOGGLE MESSAGE */
+[id*="icon_check_"]:checked + .icn_mess path:nth-child(1){
+    transform: translateY(-15%);
+}[id*="icon_check_"]:checked + .icn_mess path:nth-child(2){
+    transform: translateY(15%);
+}
+/* FOR TOGGLE MESSAGE */
+
+/* FOR TOGGLE BELL */
+[id*="icon_check_"]:checked + .icn_bell path:nth-child(2){
+    transform: translateX(25%);
+}[id*="icon_check_"]:checked + .icn_bell svg{
+    transform: rotateZ(35deg);
+}
+/* FOR TOGGLE BELL */
+
+/* FOR TOGGLE ARROWS */
+[class*="icn_left"] path:nth-child(1),
+[class*="icn_right"] path:nth-child(1),
+[class*="icn_top"] path:nth-child(1),
+[class*="icn_bottom"] path:nth-child(1){
+    stroke-width: 15px !important;
+    fill: none !important;
+    transform-origin: 50% 50%;
+}
+[class*="icn_right"] path:nth-child(1){
+    transform: rotateZ(180deg);
+}[class*="icn_top"] path:nth-child(1){
+    transform: rotateZ(90deg);
+}[class*="icn_bottom"] path:nth-child(1){
+    transform: rotateZ(-90deg);
+}
+
+[id*="icon_check_"]:checked + .icn_left path:nth-child(1){
+    transform: rotateZ(180deg);
+}[id*="icon_check_"]:checked + .icn_right path:nth-child(1){
+    transform: rotateZ(360deg);
+}[id*="icon_check_"]:checked + .icn_top path:nth-child(1){
+    transform: rotateZ(-90deg);
+}[id*="icon_check_"]:checked + .icn_bottom path:nth-child(1){
+    transform: rotateZ(-270deg);
+}
+/* FOR TOGGLE ARROWS */
+
+/* FOR TOGGLE BOOKMARK */
+.icn_bookmark path{
+    transform-origin: center;
+}
+[id*="icon_check_"]:not(:checked) + .icn_bookmark path:nth-child(2){
+    fill: var(--BGP) !important;
+}[id*="icon_check_"]:checked + .icn_bookmark path:nth-child(2){
+    fill: var(--BGCA) !important;
+}[id*="icon_check_"]:checked + .icn_bookmark path{
+    animation: popIcon 150ms ease-in-out backwards;
+}
+/* FOR TOGGLE BOOKMARK */
+
+/* FOR TOGGLE HEART */
+.icn_heart path{
+    transform-origin: center;
+}
+[id*="icon_check_"]:not(:checked) + .icn_heart path:nth-child(2){
+    fill: var(--BGP) !important;
+}[id*="icon_check_"]:checked + .icn_heart path:nth-child(2){
+    fill: var(--BGCA) !important;
+}[id*="icon_check_"]:checked + .icn_heart path{
+    animation: popIcon 150ms ease-in-out backwards;
+}
+/* FOR TOGGLE HEART */
+
+/* FOR TOGGLE SETTINGS */
+[class*="icn_setting"] path{
+    transform-origin: 50% 50%;
+}[class*="icn_setting"] path:nth-child(3){
+    transform: rotateZ(45deg);
+}
+[id*="icon_check_"]:checked + .icn_setting path:nth-child(2){
+    transform: rotateZ(360deg);
+}[id*="icon_check_"]:checked + .icn_setting path:nth-child(3){
+    transform: rotateZ(405deg);
+}
+/* FOR TOGGLE SETTINGS */
+
+/* FOR TOGGLE MEDIA ICON */
+[class*="icn_play"] path,
+[class*="icn_pause"] path,
+[class*="icn_retry"] path{
+    transform-origin: 50% 50%;
+}[id*="icon_check_"]:checked + .icn_retry path{
+    animation: spinIcon 300ms infinite forwards;
+}[id*="icon_check_"]:checked + .icn_play path,
+[id*="icon_check_"]:checked + .icn_pause path{
+    animation: popIcon 150ms ease-in-out backwards;
+}
+
+[class*="icn_play"] path:not(:nth-child(1)){
+    opacity: 0;
+}[id*="icon_check_"]:checked + .icn_play path:nth-child(1){
+    opacity: 0;
+}[id*="icon_check_"]:checked + .icn_play path:not(:nth-child(1)){
+    opacity: 1;
+}
+
+
+[class*="icn_pause"] path:nth-child(1){
+    opacity: 0;
+}[id*="icon_check_"]:checked + .icn_pause path:nth-child(1){
+    opacity: 1;
+}[id*="icon_check_"]:checked + .icn_pause path:not(:nth-child(1)){
+    opacity: 0;
+}
+
+/* FOR TOGGLE MEDIA ICON */
+
+/* FOR TOGGLE/NON-TOGGLE MATH SIGN */
+[class*="icn_add"] path,
+[class*="icn_minus"] path,
+[class*="icn_smallAdd"] path,
+[class*="icn_smallMinus"] path,
+[class*="icn_smallTimes"] path,
+[class*="icn_times"] path,
+[class*="icn_roundAdd"] path,
+[class*="icn_roundMinus"] path,
+[class*="icn_roundTimes"] path{
+    stroke-width: 10px !important;
+    fill: none !important;
+    transform-origin: 50% 50%;
+}
+
+[class*="icn_minus"] path:nth-child(2),
+[class*="icn_roundMinus"] path:nth-child(2),
+[class*="icn_smallMinus"] path:nth-child(2){
+    opacity: 0;
+}
+
+.icn_times path, .icn_smallTimes path{
+    transform: rotateZ(45deg) scale(120%, 120%);
+}.icn_roundTimes path{
+    transform: rotateZ(45deg);
+}
+
+[id*="icon_check_"]:checked + .icn_add path,
+[id*="icon_check_"]:checked + .icn_smallAdd path,
+[id*="icon_check_"]:checked + .icn_roundAdd path{
+    transform: rotateZ(360deg);
+}[id*="icon_check_"]:checked + .icn_add path:nth-child(2),
+[id*="icon_check_"]:checked + .icn_smallAdd path:nth-child(2),
+[id*="icon_check_"]:checked + .icn_roundAdd path:nth-child(2){
+    opacity: 0;
+}
+[id*="icon_check_"]:checked + .icn_minus path,
+[id*="icon_check_"]:checked + .icn_roundMinus path,
+[id*="icon_check_"]:checked + .icn_smallMinus path{
+    transform: rotateZ(360deg);
+}[id*="icon_check_"]:checked + .icn_minus path:nth-child(2),
+[id*="icon_check_"]:checked + .icn_roundMinus path:nth-child(2),
+[id*="icon_check_"]:checked + .icn_smallMinus path:nth-child(2){
+    opacity: 1;
+}
+/* FOR TOGGLE/NON-TOGGLE MATH SIGN */
+
+/* FOR NON-TOGGLE CHART */
+.icn_chart path:nth-child(2){
+    stroke-width: 10px;
+    fill: none !important;
+}
+/* FOR NON-TOGGLE CHART */
+
+/* FOR NON-TOGGLE TELEPHONE */
+[class*="_telephone"] path{
+    transform-origin: center;
+    transform: rotateZ(-45deg);
+}
+/* FOR NON-TOGGLE TELEPHONE */
+
+/* FOR NON-TOGGLE USER/S */
+.icn_user path,
+.icn_twoUsers path,
+.icn_threeUsers path{
+    stroke-width: 10px !important;
+    fill: none !important;
+}
+/* FOR NON-TOGGLE USER/S */
+
+/* FOR NON-TOGGLE OTHERS STROKE 10px*/
+[class*="_exclamation"] path,
+[class*="_question"] path,
+[class*="_globe"] path,
+[class*="_altComment"] path,
+[class*="_comment"] path,
+[class*="_atEmail"] path,
+[class*="_eye"] path:nth-child(1){
+    stroke-width: 10px !important;
+    fill: none !important;
+}
+/* FOR NON-TOGGLE OTHERS STROKE 10px*/
+
+/* FOR OTHERS STROKE 12px*/
+[class*="_search"] path,
+[class*="_play"] path,
+[class*="_pause"] path,
+[class*="_retry"] path:nth-child(1),
+[class*="_telephone"] path:not(:nth-child(1)),
+[class*="_logout"] path:not(:nth-child(1)){
+    stroke-width: 12px !important;
+    fill: none !important;
+}
+/* FOR OTHERS STROKE 15px*/
+/* ~~~~~~~~~~~ FOR ICONS ~~~~~~~~~~~ */
+/* --------------BUTTON STYLE-------------- */
+
+@keyframes popIcon {
+    1%{
+        transform: scale(100%);
+    }
+    50%{
+        transform: scale(50%);
+    }
+    100%{
+        transform: scale(100%);
+    }
+}
+@keyframes spinIcon {
+    1%{
+        transform: rotateZ(0deg);
+    }
+    100%{
+        transform: rotatez(360deg);
+    }
+}
+
+@media (max-width: 1100px){
+    .grid_adjust{
+        width: 100% !important;
+    }.flex_adjust{
+        flex-direction: column;
+    }
+}@media (max-width: 900px){
+}@media (max-width: 600px){
+}@media (max-width: 450px){
+}
