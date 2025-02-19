@@ -72,7 +72,7 @@ footer{
 }
 
 #mySelf, .myEduc{
-    padding: 20px;
+    padding: 0px 20px 20px;
 }#myself img{
     width: 300px;
     border-radius: 40px; 
@@ -153,5 +153,6 @@ footer{
         width: calc(100% - 40px);
     }#myself img{
         width: calc(100% - 40px);
+        padding: 0px 20px;
     }
 }
