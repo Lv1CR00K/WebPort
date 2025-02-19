@@ -3,7 +3,7 @@ body{
     --blackBg: white !important;
     --grayBg: #151e2b !important;
     --txtColD: white !important;
-    --txtColW: black !important;
+    --txtColL: black !important;
 
     --borderValueWhite: 1px #354a69 solid !important;
 
@@ -20,6 +20,9 @@ body{
     -moz-user-select: none; /* Firefox */
     -ms-user-select: none; /* Internet Explorer/Edge */
     user-select: none;
+    --ani: up;
+
+    overflow-x: hidden;
 }
 html {
     scroll-behavior: smooth;
@@ -68,8 +71,58 @@ footer{
     box-sizing: border-box;
 }
 
+#mySelf, .myEduc{
+    padding: 20px;
+}#myself img{
+    width: 300px;
+    border-radius: 40px; 
+    padding: 20px;
+}#myself .inside{
+    max-width: 700px;
+    box-sizing: border-box;
+}
 
 
+@keyframes up {
+    from{
+        opacity: 0;
+        scale: 0.2;
+        transform: translateY(200px);
+    }to{
+        opacity: 1;
+        scale: 1;
+        transform: translateY(0px);
+    }
+}@keyframes down {
+    from{
+        opacity: 0;
+        transform: translateY(-200px);
+    }to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}@keyframes left {
+    from{
+        opacity: 0;
+        transform: translateX(-200px);
+    }to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}@keyframes right {
+    from{
+        opacity: 0;
+        transform: translateX(200px);
+    }to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+.block{
+    animation: var(--ani) linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
 @media (max-width: 700px){
     #menuHider{
         display: block;
@@ -93,5 +146,12 @@ footer{
         border-bottom-width: 0px;
     }.menuTab .menuSelection:hover li{
         background-color: rgb(51, 47, 72);
+    }
+
+    #mySelf{
+        flex-direction: column;
+        width: calc(100% - 40px);
+    }#myself img{
+        width: calc(100% - 40px);
     }
 }
