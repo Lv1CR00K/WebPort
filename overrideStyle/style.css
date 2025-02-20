@@ -87,7 +87,7 @@ footer{
     font-size: 20px;
 }
 
-
+/* ANIMATIONS */
 @keyframes up {
     from{
         opacity: 0;
@@ -139,6 +139,7 @@ footer{
     }
     
 }
+/* ANIMATIONS */
 
 .infiniteScroll{
     border-width: 2px 0px !important;
