@@ -87,6 +87,44 @@ footer{
     font-size: 20px;
 }
 
+.infiniteScroll{
+    border-width: 2px 0px !important;
+    border: dashed #354a69;
+    overflow-x: hidden;
+    width: calc(100% - 40px); 
+    margin: 0px 20px;
+    white-space: nowrap;
+    mask-image: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,1) 20%, rgba(0,0,0,1)80%, rgba(0,0,0,0));
+}.infiniteScroll:hover .IS_holder{
+    animation-play-state: paused;
+}.infiniteScroll .IS_holder{
+    display: flex;
+    flex-direction: row;
+    animation: var(--aniScroll) 10s linear infinite;
+    white-space: nowrap;
+}.infiniteScroll .IS_holder .IS_span,
+.infiniteScroll .IS_holder .IS_img{
+    border-radius: 10px;
+    display: flex;
+    padding: 20px;
+    margin: 10px;
+    background-color: var(--whiteBg);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 1;
+}.infiniteScroll .IS_holder .IS_img{
+    padding: 0px;
+    background-color: transparent;
+}
+
+.block{
+    animation: var(--ani) linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+
+
 /* ANIMATIONS */
 @keyframes up {
     from{
@@ -140,43 +178,6 @@ footer{
     
 }
 /* ANIMATIONS */
-
-.infiniteScroll{
-    border-width: 2px 0px !important;
-    border: dashed #354a69;
-    overflow-x: hidden;
-    width: calc(100% - 40px); 
-    margin: 0px 20px;
-    white-space: nowrap;
-    mask-image: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,1) 20%, rgba(0,0,0,1)80%, rgba(0,0,0,0));
-}.infiniteScroll:hover .IS_holder{
-    animation-play-state: paused;
-}.infiniteScroll .IS_holder{
-    display: flex;
-    flex-direction: row;
-    animation: var(--aniScroll) 10s linear infinite;
-    white-space: nowrap;
-}.infiniteScroll .IS_holder .IS_span,
-.infiniteScroll .IS_holder .IS_img{
-    border-radius: 10px;
-    display: flex;
-    padding: 20px;
-    margin: 10px;
-    background-color: var(--whiteBg);
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    z-index: 1;
-}.infiniteScroll .IS_holder .IS_img{
-    padding: 0px;
-    background-color: transparent;
-}
-
-.block{
-    animation: var(--ani) linear;
-    animation-timeline: view();
-    animation-range: entry 0% cover 40%;
-}
 @media (max-width: 700px){
     #menuHider{
         display: block;
