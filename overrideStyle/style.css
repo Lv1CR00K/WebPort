@@ -21,8 +21,9 @@ body{
     -ms-user-select: none; /* Internet Explorer/Edge */
     user-select: none;
     --ani: up;
-
-    overflow-x: hidden;
+    --aniScroll: scroll;
+/* 
+    overflow-x: hidden; */
 }
 html {
     scroll-behavior: smooth;
@@ -122,6 +123,54 @@ footer{
         transform: translateX(0px);
     }
 }
+
+@keyframes scroll {
+    from{
+        transform: translateX(0%);
+    }to{
+        transform: translateX(-1210px);
+    }
+    
+}@keyframes scrollReverse {
+    from{
+        transform: translateX(-990px);
+    }to{
+        transform: translateX(0);
+    }
+    
+}
+
+.infiniteScroll{
+    border-width: 2px 0px !important;
+    border: dashed #354a69;
+    overflow-x: hidden;
+    width: calc(100% - 40px); 
+    margin: 0px 20px;
+    white-space: nowrap;
+    mask-image: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,1) 20%, rgba(0,0,0,1)80%, rgba(0,0,0,0));
+}.infiniteScroll:hover div{
+    animation-play-state: paused;
+}.infiniteScroll div{
+    display: flex;
+    flex-direction: row;
+    animation: var(--aniScroll) 10s linear infinite;
+    white-space: nowrap;
+}.infiniteScroll div span,
+.infiniteScroll div img{
+    border-radius: 10px;
+    display: flex;
+    padding: 20px;
+    margin: 10px;
+    background-color: var(--whiteBg);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 1;
+}.infiniteScroll div img{
+    padding: 0px;
+    background-color: transparent;
+}
+
 .block{
     animation: var(--ani) linear;
     animation-timeline: view();
