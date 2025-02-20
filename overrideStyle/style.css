@@ -22,8 +22,8 @@ body{
     user-select: none;
     --ani: up;
     --aniScroll: scroll;
-/* 
-    overflow-x: hidden; */
+
+    overflow-x: hidden;
 }
 html {
     scroll-behavior: smooth;
