@@ -207,11 +207,4 @@ footer{
     }#mySay{
         text-align: left;
     }
-
-    .block{
-        opacity: 0;
-        animation: var(--ani) linear forwards;
-        animation-timeline: view();
-        animation-range: entry -10% cover 35%;
-    }
 }
