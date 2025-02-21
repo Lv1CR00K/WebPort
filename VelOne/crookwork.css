@@ -34,6 +34,10 @@
     --BGCA: white;
     /* FOR INSIDE CONTENTS */
 
+    /* Reusable Animation */
+    --loadAni: goUp;
+    /* Reusable Animation */
+
     /* FOR DISPLAY FLEX/GRID*/
     --bWidth: 100%;   
     --cWidth: 100%;
@@ -523,6 +527,102 @@ header{
         transform: rotatez(360deg);
     }
 }
+
+/* Load */
+.loadOnView{
+    opacity: 0;
+    animation: var(--loadAni) linear forwards;
+    animation-timeline: view();
+    animation-range: entry 0% cover 35%;
+}
+/* Load */
+
+/* Reusable Animation */
+@keyframes goUp {
+    from{
+        transform: translateY(200px);
+    }to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}@keyframes goDown {
+    from{
+        transform: translateY(-200px);
+    }to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}@keyframes goLeft {
+    from{
+        transform: translateX(-200px);
+    }to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}@keyframes goRight {
+    from{
+        transform: translateX(200px);
+    }to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}@keyframes scaleUp{
+    from{
+        scale: 0.2;
+    }to{
+        opacity: 1;
+        scale: 1;
+    }
+}@keyframes scaledown{
+    from{
+        opacity: 1;
+        scale: 1;
+    }to{
+        opacity: 0;
+        scale: 0.2;
+    }
+}@keyframes clipLeft{
+    from{
+        clip-path: inset(0 100% 0 0);
+    }to{
+        opacity: 1;
+        clip-path: inset(0 0 0 0);
+    }
+}@keyframes clipRight{
+    from{
+        clip-path: inset(0 0 0 100%);
+    }to{
+        opacity: 1;
+        clip-path: inset(0 0 0 0);
+    }
+}@keyframes clipUp{
+    from{
+        clip-path: inset(100% 0 0 0);
+    }to{
+        opacity: 1;
+        clip-path: inset(0 0 0 0);
+    }
+}@keyframes clipDown{
+    from{
+        clip-path: inset(0 0 100% 0);
+    }to{
+        opacity: 1;
+        clip-path: inset(0 0 0 0);
+    }
+}@keyframes appear{
+    from{
+        opacity: 0;
+    }to{
+        opacity: 1;
+    }
+}@keyframes dissappear{
+    from{
+        opacity: 1;
+    }to{
+        opacity: 0;
+    }
+}
+/* Reusable Animation */
 
 @media (max-width: 1100px){
     .grid_adjust{
