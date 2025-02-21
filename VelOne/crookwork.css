@@ -176,6 +176,15 @@ header{
 }
 /*------------------ DIV STYLE ------------------*/
 
+/* Load */
+.loadOnView{
+    opacity: 0;
+    animation: var(--loadAni) linear forwards;
+    animation-timeline: view();
+    animation-range: entry 0% cover 35%;
+}
+/* Load */
+
 /* --------------BUTTON STYLE-------------- */
 [class*="btn_"]{
     display: flex;
@@ -208,6 +217,7 @@ header{
 }.btn_underLine.active{
     border-bottom: 1px solid var(--txtColD);
 }
+/* --------------BUTTON STYLE-------------- */
 
 /* ~~~~~~~~~~~ FOR ICONS ~~~~~~~~~~~ */
 [id*="icon_check_"]{
@@ -527,15 +537,6 @@ header{
         transform: rotatez(360deg);
     }
 }
-
-/* Load */
-.loadOnView{
-    opacity: 0;
-    animation: var(--loadAni) linear forwards;
-    animation-timeline: view();
-    animation-range: entry 0% cover 35%;
-}
-/* Load */
 
 /* Reusable Animation */
 @keyframes goUp {
