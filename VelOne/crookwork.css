@@ -219,6 +219,47 @@ header{
 }
 /* --------------BUTTON STYLE-------------- */
 
+/* --------------CAROUSEL-------------- */
+[class*="carousel_"]{
+    --carousel_cardBC: white;
+    --carousel_cardPBC: white;
+    --carousel_cardPC: white;
+    display: flex;
+    width: 400px;
+    box-sizing: border-box;
+    overflow-x: auto;
+}
+
+.carousel_1 .cards{
+   width: 500px;
+   border-radius: 20px;
+   background-color: var(--carousel_cardBC);
+}.carousel_1 .cards img{
+    object-fit: cover;
+    object-position: center;
+    aspect-ratio: 16 / 9;
+    border-radius: 15px;
+}.carousel_1 .cards p{
+    position:relative;
+    background-color: var(--carousel_cardPBC);
+    color: var(--carousel_cardPC);
+    font-size: 15px;
+    text-align: center !important;
+    border-radius: 0px 20px 0px 13px;
+    width: 200px;
+    z-index: 1 !important;
+    padding: 20px;
+    margin-top: -57px;
+    font-weight: bold;
+}.carousel_1 .cards svg{
+    fill: var(--carousel_cardPBC);
+    height: 30px;
+    margin-top: -87px;
+    margin-left: calc(-100% + 30px);
+}
+/* --------------CAROUSEL-------------- */
+
+
 /* ~~~~~~~~~~~ FOR ICONS ~~~~~~~~~~~ */
 [id*="icon_check_"]{
     display: none !important;

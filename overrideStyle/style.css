@@ -118,6 +118,16 @@ footer{
     background-color: transparent;
 }
 
+
+[class*="carousel_"]{
+    width: 100%;
+}.carousel_1 .cards{
+    width: 600px;
+    margin: 20px;
+}.carousel_1 .cards img{
+    width: 600px;
+    height: 400px;
+}
 /* ANIMATIONS */
 @keyframes scroll {
     from{
@@ -168,5 +178,14 @@ footer{
         padding: 0px 20px;
     }#mySay{
         text-align: left;
+    }
+    
+    [class*="carousel_"]{
+        width: 100% !important;
+    }.carousel_1 .cards{
+        width: 100%;
+    }.carousel_1 .cards img{
+        width: calc(100vw - 50px);
+        height: 400px;
     }
 }
