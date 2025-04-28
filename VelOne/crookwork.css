@@ -254,7 +254,7 @@ header{
 }.carousel_1 .cards svg{
     fill: var(--carousel_cardPBC);
     height: 30px;
-    margin-top: -87px;
+    margin-top: -86px;
     margin-left: calc(-100% + 30px);
 }
 /* --------------CAROUSEL-------------- */
