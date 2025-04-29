@@ -227,13 +227,15 @@ header{
     display: flex;
     width: 400px;
     box-sizing: border-box;
-    overflow-x: auto;
+    overflow-x: hidden;
 }
 
 .carousel_1 .cards{
    width: 500px;
    border-radius: 20px;
    background-color: var(--carousel_cardBC);
+   transition: all 150ms ease-in-out; 
+   scroll-behavior: smooth;
 }.carousel_1 .cards img{
     object-fit: cover;
     object-position: center;
