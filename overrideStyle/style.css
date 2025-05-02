@@ -31,7 +31,7 @@ html {
 
 header{
     position: fixed;
-    z-index: 2;
+    z-index: 5;
     top: 0%;
     width: 100%;
     height: 50px;
@@ -181,7 +181,8 @@ footer{
     }
     
     [class*="carousel_"]{
-        width: 100% !important;
+        width: calc(100% - 40px) !important;
+        margin: 20px;
     }.carousel_1 .cards{
         width: 100%;
     }.carousel_1 .cards img{
